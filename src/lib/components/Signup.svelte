@@ -12,7 +12,33 @@
     isChecked: false,
   };
 
-  $: console.log(formData.firstName);
+  // async function submitForm() {
+  //   try {
+  //     const response = await fetch("/api/submit", {
+  //       method: "POST",
+  //       body: JSON.stringify({ formData }),
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     });
+
+  //     if (!response.ok) {
+  //       throw new Error("Failed to submit form");
+  //     }
+
+  //     alert("Form submitted successfully!");
+
+  //     // Reset form data
+  //     formData.firstName = "";
+  //     formData.lastName = "";
+  //     formData.mobileNumber = "";
+  //     formData.selectedCity = "";
+  //     formData.isChecked = false;
+  //   } catch (error) {
+  //     console.error("Error submitting form:", error);
+  //     alert("Something went wrong while submitting the form.");
+  //   }
+  // }
 </script>
 
 <section
@@ -22,7 +48,10 @@
     <div class="flex flex-start w-full">
       <h1 class="text-2xl font-medium text-start">Create an Account</h1>
     </div>
-    <form class="w-full flex flex-col gap-4">
+    <form
+      class="w-full flex flex-col gap-4"
+     
+    >
       <InputField
         label="First Name"
         placeholder="Enter your first name"
